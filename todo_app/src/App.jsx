@@ -4,11 +4,17 @@ import { TodoInput } from "./compnents/TodoInput"
 import { TodoList } from "./compnents/TodoList"
 
 function App() {
-  let x = 3
+  const todos = [
+    { input: 'Hello! Add your first todo!', complete: true },
+    { input: 'Get the grocieries!', complete: false },
+    { input: 'Learm how to web design', complete: true },
+    { input: 'Say hi to new job', complete: true },
+  ]
+  
   return (
     <>
-    <Header/>
-    <Tabs/>
+    <Header todos={todos} />
+    <Tabs />
     <TodoList/>
     <TodoInput/>
     </>
